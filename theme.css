@@ -1,0 +1,24 @@
+:root {
+    --background-color: white;
+    --text-color: black;
+}
+
+dark-mode {
+    --background-color: black;
+    --text-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.section {
+    padding: 1cm;
+}
