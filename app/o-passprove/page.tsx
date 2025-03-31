@@ -58,7 +58,7 @@ const OPassProvePage = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-[#154350]/5 via-transparent to-transparent" />
         </div>
 
-        <div className="container px-12 py-32 mx-auto relative z-10 max-w-7xl">
+        <div className="container px-8 md:px-12 py-32 mx-auto relative z-10 max-w-[1440px]">
           {/* Hero Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -70,8 +70,24 @@ const OPassProvePage = () => {
               <Award className="w-4 h-4 mr-2" />
               <span>Od roku 2019 pomáháme e-shopům s ověřením věku</span>
             </div>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="flex justify-center mb-4"
+            >
+              <Image
+                src="/files/Logo_PassProve_bila.svg"
+                alt="PassProve Logo"
+                width={250}
+                height={100}
+                className="w-auto h-[70px] md:h-[100px]"
+                priority
+              />
+            </motion.div>
+            
             <h1 className={typography.heading.h1}>
-              PassProve
               <span className="block mt-6 text-[#FAC833]">Bezpečné a spolehlivé ověření věku pro váš e-shop</span>
             </h1>
             <p className={`${typography.body.large} text-white/60 max-w-3xl mx-auto mt-6`}>
@@ -240,8 +256,8 @@ const OPassProvePage = () => {
                     <p className={`${typography.body.large} text-white/70 pt-2`}>{feature}</p>
                   </div>
                 ))}
-              </div>
-            </div>
+          </div>
+          </div>
           </motion.div>
 
           {/* Clients Section */}
@@ -256,7 +272,7 @@ const OPassProvePage = () => {
               {clients.map((_, i) => (
                 <div key={i} className="h-16 w-44 bg-white/5 backdrop-blur-sm rounded-md border border-white/10" />
               ))}
-            </div>
+          </div>
           </motion.div>
 
           {/* CTA Section */}
@@ -264,7 +280,7 @@ const OPassProvePage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="max-w-5xl mx-auto text-center mb-16"
+            className="max-w-[1280px] mx-auto text-center mb-16"
           >
             <Card className="border border-white/10 bg-white/5 backdrop-blur-sm shadow-xl">
               <div className="absolute inset-0 opacity-[0.02]"
@@ -277,7 +293,7 @@ const OPassProvePage = () => {
               <CardContent className="pt-16 pb-16 px-16 relative z-10">
                 <div className="mb-8">
                   <Globe className="h-16 w-16 text-[#FAC833] mx-auto mb-6" />
-                </div>
+          </div>
                 <h2 className={`${typography.heading.h2} text-white mb-6`}>Připraveni začít s ověřováním věku?</h2>
                 <p className="text-white/70 mb-10 max-w-3xl mx-auto text-lg leading-relaxed">
                   Chtěli byste začít ověřovat věk vašich zákazníků, nebo máte další otázky? Neváhejte nás kontaktovat nebo si prohlédnout náš ceník.
@@ -302,7 +318,7 @@ const OPassProvePage = () => {
                     <Link href="/kontakt" className="flex items-center">
                       <span>Kontaktujte nás</span>
                       <ArrowRight className="h-5 w-5 ml-3" />
-                    </Link>
+          </Link>
                   </Button>
                 </div>
               </CardContent>

@@ -42,9 +42,9 @@ export const spacing = {
     lg: 'py-24'
   },
   container: {
-    sm: 'max-w-5xl',
-    md: 'max-w-6xl',
-    lg: 'max-w-7xl'
+    sm: 'max-w-6xl',
+    md: 'max-w-7xl',
+    lg: 'max-w-8xl'
   }
 } as const
 

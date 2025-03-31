@@ -77,68 +77,44 @@ const CeníkPage = () => {
   
   return (
     <>
-      <Navbar />
-      <section className="relative min-h-screen w-full bg-[#164550]">
-        {/* Background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-[0.02]"
-            style={{
-              backgroundImage: `linear-gradient(#8FBEC3 1px, transparent 1px),
-                              linear-gradient(90deg, #8FBEC3 1px, transparent 1px)`,
-              backgroundSize: '50px 50px'
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#154350]/5 via-transparent to-transparent" />
-        </div>
+      <div className="min-h-screen bg-[#164550]">
+        <Navbar />
+        <section className="relative min-h-screen w-full">
+          {/* Background elements */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 opacity-[0.02]"
+              style={{
+                backgroundImage: `linear-gradient(#8FBEC3 1px, transparent 1px),
+                                linear-gradient(90deg, #8FBEC3 1px, transparent 1px)`,
+                backgroundSize: '50px 50px'
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#154350]/5 via-transparent to-transparent" />
+          </div>
 
-        {/* Hero section with animated gradient */}
-        <div className="relative">
-          <div className="container px-12 py-32 mx-auto relative z-10 max-w-7xl">
+          <div className="container px-8 md:px-12 py-32 mx-auto relative z-10 max-w-[1440px]">
+            {/* Hero Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-center mb-24 space-y-8 max-w-4xl mx-auto"
+              className="text-center space-y-8 max-w-4xl mx-auto mb-24"
             >
               <div className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-[#8FBEC3] mx-auto">
                 <Shield className="w-4 h-4 mr-2" />
-                <span>Ověřovací služby nejvyšší kvality</span>
+                <span>Transparentní ceník</span>
               </div>
               <h1 className={typography.heading.h1}>
-                Ceník ověřovacích služeb
-                <span className="block mt-6 text-[#FAC833]">férové a transparentní ceny</span>
+                Vyberte si plán
+                <span className="block mt-6 text-[#FAC833]">který nejlépe odpovídá vašim potřebám</span>
               </h1>
-              <p className={`${typography.body.large} text-white/60 max-w-3xl mx-auto mt-6`}>
-                Vyberte si cenový plán, který nejlépe vyhovuje vašim potřebám. Platby jsou strhávány z kreditu předem
-                nabitého v klientském portálu.
+              <p className={`${typography.body.large} text-white/60 max-w-3xl mx-auto`}>
+                Nabízíme dva základní cenové plány, které se liší délkou závazku a úrovní poskytovaných služeb. Vyberte si ten, který vám bude nejlépe vyhovovat.
               </p>
-
-              {/* Toggle switch */}
-              <div className="flex items-center justify-center mt-12 space-x-6">
-                <span className={cn("text-base font-medium", !isAnnual ? "text-[#FAC833]" : "text-white/60")}>
-                  Měsíční platba
-                </span>
-                <button
-                  onClick={() => setIsAnnual(!isAnnual)}
-                  className={cn(
-                    "relative inline-flex h-7 w-14 items-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FAC833]",
-                    isAnnual ? "bg-[#FAC833]" : "bg-white/10",
-                  )}
-                >
-                  <span
-                    className={cn(
-                      "inline-block h-5 w-5 transform rounded-full bg-white transition-transform",
-                      isAnnual ? "translate-x-8" : "translate-x-1",
-                    )}
-                  />
-                </button>
-                <span className={cn("text-base font-medium", isAnnual ? "text-[#FAC833]" : "text-white/60")}>
-                  Roční platba <span className="text-[#FAC833] font-semibold">(-20%)</span>
-                </span>
-              </div>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-14 max-w-6xl mx-auto mb-32">
+            {/* Pricing Grid */}
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-10 max-w-[900px] mx-auto mb-32">
               {/* Contract Plan */}
               <motion.div custom={0} initial="hidden" animate="visible" variants={fadeIn}>
                 <Card className="relative overflow-hidden border-0 bg-[#154350] shadow-xl h-full glass-card">
@@ -461,7 +437,7 @@ const CeníkPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="max-w-7xl mx-auto mb-32"
+              className="max-w-[1280px] mx-auto mb-32"
             >
               <h2 className={`${typography.heading.h2} text-white mb-12 text-center`}>Proč zvolit naše služby</h2>
               <div className="grid md:grid-cols-3 gap-14">
@@ -582,10 +558,9 @@ const CeníkPage = () => {
               </Card>
             </motion.div>
           </div>
-        </div>
-
+        </section>
         <Footer />
-      </section>
+      </div>
     </>
   );
 };

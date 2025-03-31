@@ -11,25 +11,28 @@ import { motion } from "framer-motion"
 
 const articles = [
   {
-    image: "/placeholder.svg",
+    image: "/images/blog/bankid.jpg",
     category: "Novinky",
-    title: "Nové možnosti ověření věku",
-    excerpt: "Představujeme nové způsoby, jak mohou vaši zákazníci ověřit svůj věk...",
-    link: "/blog/nove-moznosti-overeni-veku",
+    title: "BankID nově v PassProve",
+    excerpt: "Představujeme integraci s bankovní identitou, která umožňuje ověřit věk zákazníka během několika sekund přímo pomocí bankovní identity.",
+    date: "24. března 2023",
+    link: "/blog/bankid-nove-v-passprove",
   },
   {
-    image: "/placeholder.svg",
+    image: "/images/blog/implementace.jpg",
     category: "Návody",
-    title: "Jak implementovat PassProve",
-    excerpt: "Podrobný průvodce implementací našeho řešení do vašeho e-shopu...",
-    link: "/blog/jak-implementovat-passprove",
+    title: "Jak implementovat PassProve do Shoptetu",
+    excerpt: "Podrobný průvodce implementací našeho řešení do vašeho e-shopu na platformě Shoptet včetně kódových ukázek a nastavení.",
+    date: "15. února 2023",
+    link: "/blog/jak-implementovat-passprove-do-shoptetu",
   },
   {
-    image: "/placeholder.svg",
+    image: "/images/blog/iso.jpg",
     category: "Bezpečnost",
-    title: "ISO 27001 certifikace",
-    excerpt: "Co pro vás znamená získání certifikace ISO 27001...",
-    link: "/blog/iso-27001-certifikace",
+    title: "Získali jsme ISO 27001 certifikaci",
+    excerpt: "Jsme držiteli certifikace ISO 27001, což znamená, že splňujeme nejvyšší standardy v oblasti bezpečnosti informačních systémů a ochrany dat.",
+    date: "8. ledna 2023",
+    link: "/blog/ziskali-jsme-iso-27001-certifikaci",
   },
 ]
 
@@ -89,7 +92,10 @@ export function Blog() {
                   {article.category}
                 </Badge>
                 <CardTitle className="text-2xl">{article.title}</CardTitle>
-                <CardDescription className="text-white/60 text-lg">
+                <div className="text-[#8FBEC3] text-sm font-medium mt-2 mb-4">
+                  {article.date}
+                </div>
+                <CardDescription className="text-white/70 text-lg">
                   {article.excerpt}
                 </CardDescription>
               </CardContent>

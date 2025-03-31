@@ -44,4 +44,4 @@ const PluginPage = () => {
   );
 };
 
-export default HotoveReseniPage;
+export default PluginPage;

@@ -15,7 +15,6 @@ import {
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Sun, Moon } from "lucide-react"
-import { themes } from "@/lib/themes"
 
 const menuItems = [
   {
@@ -67,14 +66,6 @@ const menuItems = [
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false)
-  const [theme, setTheme] = React.useState("dark")
-  const currentTheme = themes[theme as keyof typeof themes]
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
-    setTheme(newTheme)
-    document.documentElement.classList.toggle('dark')
-  }
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -86,16 +77,15 @@ export function Navbar() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 mt-5">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12">
         <div className={cn(
-          "navbar-gradient flex h-16 items-center rounded-xl px-4 backdrop-blur-xl transition-colors duration-200",
-          currentTheme.navbar.background,
-          currentTheme.navbar.hover,
-          currentTheme.navbar.blur
+          "flex h-16 items-center rounded-xl px-6 backdrop-blur-md transition-all duration-200",
+          "bg-gradient-to-r from-[#164550]/90 to-[#FAC833]/10 border border-[#FAC833]/20",
+          isScrolled ? "shadow-lg shadow-[#FAC833]/5" : ""
         )}>
           <Link href="/" className="flex-none">
             <Image
-              src={theme === 'light' ? "../files/Logo_PassProve_barvy.svg" : "../files/Logo_PassProve_bila.svg"}
+              src="/files/Logo_PassProve_bila.svg"
               alt="PassProve Logo"
               width={140}
               height={40}
@@ -110,8 +100,7 @@ export function Navbar() {
                   <Link href="/o-passprove" legacyBehavior passHref>
                     <NavigationMenuLink className={cn(
                       navigationMenuTriggerStyle(),
-                      "bg-transparent hover:bg-transparent",
-                      currentTheme.navbar.text
+                      "bg-transparent hover:bg-[#FAC833]/10 text-white/90 hover:text-white"
                     )}>
                       O PassProve
                     </NavigationMenuLink>
@@ -120,23 +109,17 @@ export function Navbar() {
                 
                 {menuItems.map((item, index) => (
                   <NavigationMenuItem key={index}>
-                    <NavigationMenuTrigger className={cn(
-                      "bg-transparent data-[state=open]:bg-transparent hover:bg-transparent",
-                      currentTheme.navbar.text
-                    )}>
+                    <NavigationMenuTrigger className="bg-transparent data-[state=open]:bg-[#FAC833]/10 hover:bg-[#FAC833]/10 text-white/90 hover:text-white">
                       {item.trigger}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className={cn(
-                        "grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]",
-                        theme === 'light' ? 'bg-white' : 'bg-[#014653]'
-                      )}>
+                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-gradient-to-r from-[#164550]/95 to-[#FAC833]/5 border border-[#FAC833]/20 backdrop-blur-md">
                         {item.content.map((subItem, subIndex) => (
                           <ListItem
                             key={subIndex}
                             title={subItem.title}
                             href={subItem.href}
-                            className={currentTheme.navbar.text}
+                            className="text-white/90 hover:text-white hover:bg-[#FAC833]/10"
                           >
                             {subItem.description}
                           </ListItem>
@@ -150,53 +133,24 @@ export function Navbar() {
                   <Link href="/cenik" legacyBehavior passHref>
                     <NavigationMenuLink className={cn(
                       navigationMenuTriggerStyle(),
-                      "bg-transparent hover:bg-transparent",
-                      currentTheme.navbar.text
+                      "bg-transparent hover:bg-[#FAC833]/10 text-white/90 hover:text-white"
                     )}>
                       Ceník
                     </NavigationMenuLink>
                   </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <button
-                    onClick={toggleTheme}
-                    className={cn(
-                      "inline-flex items-center justify-center rounded-md h-8 w-8 bg-transparent hover:bg-transparent",
-                      currentTheme.navbar.text
-                    )}
-                  >
-                    {theme === 'light' ? (
-                      <Moon className="h-4 w-4" />
-                    ) : (
-                      <Sun className="h-4 w-4" />
-                    )}
-                  </button>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
 
           <div className="flex-none flex items-center space-x-6">
-            <Link href="/prihlaseni" 
-              className={cn(
-                "inline-flex items-center justify-center rounded-md px-4 py-2",
-                "bg-transparent hover:bg-white/5 transition-all duration-300",
-                "cursor-pointer",
-                currentTheme.navbar.text
-              )}
+            <Link href="/prihlasit-se" 
+              className="inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-medium text-white/90 hover:text-white bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
             >
               Přihlásit se
             </Link>
             <Link href="/registrace"
-              className={cn(
-                "inline-flex items-center justify-center rounded-md px-4 py-2",
-                "transition-all duration-300",
-                "cursor-pointer",
-                currentTheme.navbar.text,
-                theme === 'light' 
-                  ? 'bg-[#014653]/5 hover:bg-[#014653]/10' 
-                  : 'bg-white/5 hover:bg-white/10'
-              )}
+              className="inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-medium text-[#231F20] bg-[#FAC833] hover:bg-[#FAC833]/90 transition-all duration-300"
             >
               Registrace
             </Link>
@@ -218,13 +172,13 @@ const ListItem = React.forwardRef<
           ref={ref}
           href={href}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className="line-clamp-2 text-sm leading-snug text-white/60">
             {children}
           </p>
         </a>
@@ -232,3 +186,4 @@ const ListItem = React.forwardRef<
     </li>
   )
 })
+ListItem.displayName = "ListItem"
