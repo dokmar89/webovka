@@ -19,12 +19,10 @@
       ]
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/public2/icons/(.*)", "dest": "/public2/icons/$1" },
-    { "src": "/public2/files/(.*)", "dest": "/public2/files/$1" },
-    { "src": "/public2/images/(.*)", "dest": "/public2/images/$1" },
-    { "src": "/public2/fonts/(.*)", "dest": "/public2/fonts/$1" },
-    { "src": "/(.*)", "dest": "/" }
+  "rewrites": [
+    { "source": "/public2/icons/(.*)", "destination": "/public2/icons/$1" },
+    { "source": "/public2/files/(.*)", "destination": "/public2/files/$1" },
+    { "source": "/public2/images/(.*)", "destination": "/public2/images/$1" },
+    { "source": "/public2/fonts/(.*)", "destination": "/public2/fonts/$1" }
   ]
 } 
