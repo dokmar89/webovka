@@ -256,8 +256,8 @@ const OPassProvePage = () => {
                     <p className={`${typography.body.large} text-white/70 pt-2`}>{feature}</p>
                   </div>
                 ))}
-          </div>
-          </div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Clients Section */}
@@ -272,7 +272,7 @@ const OPassProvePage = () => {
               {clients.map((_, i) => (
                 <div key={i} className="h-16 w-44 bg-white/5 backdrop-blur-sm rounded-md border border-white/10" />
               ))}
-          </div>
+            </div>
           </motion.div>
 
           {/* CTA Section */}
@@ -293,7 +293,7 @@ const OPassProvePage = () => {
               <CardContent className="pt-16 pb-16 px-16 relative z-10">
                 <div className="mb-8">
                   <Globe className="h-16 w-16 text-[#FAC833] mx-auto mb-6" />
-          </div>
+                </div>
                 <h2 className={`${typography.heading.h2} text-white mb-6`}>Připraveni začít s ověřováním věku?</h2>
                 <p className="text-white/70 mb-10 max-w-3xl mx-auto text-lg leading-relaxed">
                   Chtěli byste začít ověřovat věk vašich zákazníků, nebo máte další otázky? Neváhejte nás kontaktovat nebo si prohlédnout náš ceník.
@@ -318,11 +318,128 @@ const OPassProvePage = () => {
                     <Link href="/kontakt" className="flex items-center">
                       <span>Kontaktujte nás</span>
                       <ArrowRight className="h-5 w-5 ml-3" />
-          </Link>
+                    </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
+          </motion.div>
+
+          {/* Our Brand Section - NEW SECTION */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto mb-32"
+          >
+            <div className="text-center mb-16">
+              <h2 className={typography.heading.h2 + " mb-4"}>Naše značka</h2>
+              <p className={`${typography.body.large} text-white/60 max-w-3xl mx-auto`}>
+                Jsme moderní a důvěryhodná značka v oblasti ověřování věku
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-10">
+              <div className="rounded-xl p-8 flex flex-col items-center justify-center bg-white shadow-lg">
+                <Image
+                  src="/files/Logo_PassProve_cerna.svg"
+                  alt="PassProve Černé Logo"
+                  width={200}
+                  height={80}
+                  className="w-auto h-[60px] mb-6"
+                />
+                <h3 className={typography.heading.h4 + " text-[#231F20] mb-2"}>Černé logo</h3>
+                <p className={`${typography.body.base} text-[#231F20]/70 text-center`}>
+                  Primární logo pro světlé pozadí
+                </p>
+              </div>
+              
+              <div className="rounded-xl p-8 flex flex-col items-center justify-center bg-[#154350] shadow-lg border border-white/10">
+                <Image
+                  src="/files/Logo_PassProve_bila.svg"
+                  alt="PassProve Bílé Logo"
+                  width={200}
+                  height={80}
+                  className="w-auto h-[60px] mb-6"
+                />
+                <h3 className={typography.heading.h4 + " text-white mb-2"}>Bílé logo</h3>
+                <p className={`${typography.body.base} text-white/70 text-center`}>
+                  Pro tmavá pozadí a kontrastní využití
+                </p>
+              </div>
+              
+              <div className="rounded-xl p-8 flex flex-col items-center justify-center bg-gradient-to-br from-[#0D2B33] to-[#154350] shadow-lg border border-white/10">
+                <Image
+                  src="/files/Logo_PassProve_barvy.svg"
+                  alt="PassProve Barevné Logo"
+                  width={200}
+                  height={80}
+                  className="w-auto h-[60px] mb-6"
+                />
+                <h3 className={typography.heading.h4 + " text-white mb-2"}>Barevné logo</h3>
+                <p className={`${typography.body.base} text-white/70 text-center`}>
+                  Pro speciální příležitosti a materiály
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Safety & Features Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="max-w-6xl mx-auto mb-32"
+          >
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-14 shadow-xl border border-white/10 relative z-10">
+              <h2 className={`${typography.heading.h2} text-white mb-12 text-center`}>
+                Bezpečnost a funkce
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-10">
+                <div className="flex items-start space-x-6 bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/10 hover:bg-white/15 transition-all duration-300">
+                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-[#FAC833]/10 rounded-xl border border-[#FAC833]/20">
+                    <Shield className="h-6 w-6 text-[#FAC833]" />
+                  </div>
+                  <p className={`${typography.body.large} text-white/70 pt-2`}>
+                    Bezpečnostní standardy ISO 27001
+                  </p>
+                </div>
+                <div className="flex items-start space-x-6 bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/10 hover:bg-white/15 transition-all duration-300">
+                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-[#FAC833]/10 rounded-xl border border-[#FAC833]/20">
+                    <CheckCircle className="h-6 w-6 text-[#FAC833]" />
+                  </div>
+                  <p className={`${typography.body.large} text-white/70 pt-2`}>
+                    Ověřování věku zákazníků
+                  </p>
+                </div>
+                <div className="flex items-start space-x-6 bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/10 hover:bg-white/15 transition-all duration-300">
+                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-[#FAC833]/10 rounded-xl border border-[#FAC833]/20">
+                    <Building2 className="h-6 w-6 text-[#FAC833]" />
+                  </div>
+                  <p className={`${typography.body.large} text-white/70 pt-2`}>
+                    Ověřování věku na e-shopech
+                  </p>
+                </div>
+                <div className="flex items-start space-x-6 bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/10 hover:bg-white/15 transition-all duration-300">
+                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-[#FAC833]/10 rounded-xl border border-[#FAC833]/20">
+                    <Clock className="h-6 w-6 text-[#FAC833]" />
+                  </div>
+                  <p className={`${typography.body.large} text-white/70 pt-2`}>
+                    Dostupnost služby
+                  </p>
+                </div>
+                <div className="flex items-start space-x-6 bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/10 hover:bg-white/15 transition-all duration-300">
+                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-[#FAC833]/10 rounded-xl border border-[#FAC833]/20">
+                    <Users className="h-6 w-6 text-[#FAC833]" />
+                  </div>
+                  <p className={`${typography.body.large} text-white/70 pt-2`}>
+                    Spokojenost zákazníků
+                  </p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>

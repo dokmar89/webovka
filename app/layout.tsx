@@ -1,7 +1,10 @@
-import "@/styles/globals.css"
+import "./globals.css"
 import { Inter } from "next/font/google"
 
-
+export const metadata = {
+  title: "PassProve - Ověření věku pro e-shopy",
+  description: "Jednoduché a spolehlivé ověření věku pro váš e-shop. Prodávejte alkohol, tabák a další věkově omezené zboží v souladu se zákonem.",
+}
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -15,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="cs" suppressHydrationWarning>
+    <html lang="cs" suppressHydrationWarning className={inter.variable}>
       <body>
         <div className="background-animation" />
         {children}
@@ -23,7 +26,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'

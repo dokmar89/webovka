@@ -159,16 +159,17 @@ const PropojenisEshopemPage = () => {
                 <div>
                   <div className="relative rounded-xl overflow-hidden border border-white/10 h-full">
                     <div className="absolute inset-0 bg-gradient-to-tr from-[#154350] to-transparent opacity-60"></div>
-                    <video 
-                      className="w-full h-full object-cover"
-                      autoPlay 
-                      loop 
-                      muted 
-                      poster="/placeholder.svg"
-                    >
-                      <source src="/integration-video.mp4" type="video/mp4" />
-                      Váš prohlížeč nepodporuje přehrávání videa.
-                    </video>
+                    <div className="w-full h-full flex items-center justify-center p-8 bg-[#154350]">
+                      <div className="space-y-6 text-center">
+                        <div className="w-20 h-20 mx-auto rounded-full bg-[#FAC833]/20 flex items-center justify-center">
+                          <Code className="w-10 h-10 text-[#FAC833]" />
+                        </div>
+                        <div className="space-y-2">
+                          <h3 className="text-xl font-medium text-white">Jednoduchá integrace</h3>
+                          <p className="text-white/60">Stačí pár řádků kódu pro zapojení do vašeho e-shopu</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -182,13 +182,34 @@ export default function EcommercePluginsPage() {
                 <div className="flex items-center justify-center">
                   <div className="relative w-full max-w-md">
                     <div className="absolute -inset-4 bg-gradient-to-r from-[#FAC833]/10 to-[#8FBEC3]/10 rounded-3xl blur-xl opacity-50" />
-                    <Image
-                      src="/plugin-screenshot.png"
-                      alt="Plugin pro e-shop"
-                      width={500}
-                      height={400}
-                      className="rounded-xl border border-white/10 shadow-lg relative z-10"
-                    />
+                    <div className="rounded-xl border border-white/10 shadow-lg relative z-10 p-8 bg-[#0D2B33] text-white/80">
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span className="ml-2 text-white/60 text-xs">admin-panel.php</span>
+                      </div>
+                      <div className="space-y-4 font-mono text-sm">
+                        <div className="bg-white/5 p-3 rounded">
+                          <div className="text-[#8FBEC3]">PassProve Settings</div>
+                          <div className="border-b border-white/10 my-2"></div>
+                          <div className="flex items-center gap-3">
+                            <span className="text-white/60">API Key:</span> 
+                            <span className="bg-white/10 px-2 rounded">••••••••••••••••</span>
+                          </div>
+                        </div>
+                        <div className="bg-white/5 p-3 rounded">
+                          <div className="flex items-center gap-2 mb-2">
+                            <CheckCircle2 className="h-4 w-4 text-green-400" />
+                            <span>Plugin aktivní</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <CheckCircle2 className="h-4 w-4 text-green-400" />
+                            <span>Testovací režim</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

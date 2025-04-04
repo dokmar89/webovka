@@ -1,5 +1,9 @@
+'use client'
+
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { motion } from "framer-motion"
+import { typography } from '@/lib/design-system'
 
 const PluginPage = () => {
   return (
