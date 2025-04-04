@@ -60,7 +60,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-4">
             <Link href="/" className="text-white/90 hover:text-[#FAC833] transition-colors">
-              <img src="/public2/files/Logo_PassProve_bila.svg" alt="PassProve" className="h-8" />
+              <img src="/files/Logo_PassProve_bila.svg" alt="PassProve" className="h-8" />
             </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6">

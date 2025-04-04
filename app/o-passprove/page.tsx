@@ -78,7 +78,7 @@ const OPassProvePage = () => {
               className="flex justify-center mb-4"
             >
               <Image
-                src="/public2/files/Logo_PassProve_bila.svg"
+                src="/files/Logo_PassProve_bila.svg"
                 alt="PassProve Logo"
                 width={250}
                 height={100}
@@ -256,8 +256,8 @@ const OPassProvePage = () => {
                     <p className={`${typography.body.large} text-white/70 pt-2`}>{feature}</p>
                   </div>
                 ))}
-              </div>
-            </div>
+          </div>
+          </div>
           </motion.div>
 
           {/* Clients Section */}
@@ -272,7 +272,7 @@ const OPassProvePage = () => {
               {clients.map((_, i) => (
                 <div key={i} className="h-16 w-44 bg-white/5 backdrop-blur-sm rounded-md border border-white/10" />
               ))}
-            </div>
+          </div>
           </motion.div>
 
           {/* CTA Section */}
@@ -293,7 +293,7 @@ const OPassProvePage = () => {
               <CardContent className="pt-16 pb-16 px-16 relative z-10">
                 <div className="mb-8">
                   <Globe className="h-16 w-16 text-[#FAC833] mx-auto mb-6" />
-                </div>
+          </div>
                 <h2 className={`${typography.heading.h2} text-white mb-6`}>Připraveni začít s ověřováním věku?</h2>
                 <p className="text-white/70 mb-10 max-w-3xl mx-auto text-lg leading-relaxed">
                   Chtěli byste začít ověřovat věk vašich zákazníků, nebo máte další otázky? Neváhejte nás kontaktovat nebo si prohlédnout náš ceník.
@@ -318,7 +318,7 @@ const OPassProvePage = () => {
                     <Link href="/kontakt" className="flex items-center">
                       <span>Kontaktujte nás</span>
                       <ArrowRight className="h-5 w-5 ml-3" />
-                    </Link>
+          </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -343,7 +343,7 @@ const OPassProvePage = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-10">
               <div className="rounded-xl p-8 flex flex-col items-center justify-center bg-white shadow-lg">
                 <Image
-                  src="/public2/files/Logo_PassProve_cerna.svg"
+                  src="/files/Logo_PassProve_cerna.svg"
                   alt="PassProve Černé Logo"
                   width={200}
                   height={80}
@@ -357,7 +357,7 @@ const OPassProvePage = () => {
               
               <div className="rounded-xl p-8 flex flex-col items-center justify-center bg-[#154350] shadow-lg border border-white/10">
                 <Image
-                  src="/public2/files/Logo_PassProve_bila.svg"
+                  src="/files/Logo_PassProve_bila.svg"
                   alt="PassProve Bílé Logo"
                   width={200}
                   height={80}
@@ -371,7 +371,7 @@ const OPassProvePage = () => {
               
               <div className="rounded-xl p-8 flex flex-col items-center justify-center bg-gradient-to-br from-[#0D2B33] to-[#154350] shadow-lg border border-white/10">
                 <Image
-                  src="/public2/files/Logo_PassProve_barvy.svg"
+                  src="/files/Logo_PassProve_barvy.svg"
                   alt="PassProve Barevné Logo"
                   width={200}
                   height={80}

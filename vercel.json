@@ -2,27 +2,5 @@
   "framework": "nextjs",
   "buildCommand": "next build",
   "installCommand": "npm install",
-  "outputDirectory": "out",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "github": {
-    "silent": true
-  },
-  "headers": [
-    {
-      "source": "/public2/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    { "source": "/public2/icons/(.*)", "destination": "/public2/icons/$1" },
-    { "source": "/public2/files/(.*)", "destination": "/public2/files/$1" },
-    { "source": "/public2/images/(.*)", "destination": "/public2/images/$1" },
-    { "source": "/public2/fonts/(.*)", "destination": "/public2/fonts/$1" }
-  ]
+  "outputDirectory": "out"
 } 

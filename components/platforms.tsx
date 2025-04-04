@@ -1,12 +1,5 @@
 'use client'
 
-import ShoptetLogo from '/public2/icons/shoptet.svg';
-import PrestaShopLogo from '/public2/icons/prestashop.svg';
-import WooCommerceLogo from '/public2/icons/woocommerce.svg';
-import ShopifyLogo from '/public2/icons/shopify.svg';
-import MagentoLogo from '/public2/icons/magento.svg';
-import OpenCartLogo from '/public2/icons/opencart.svg';
-import APILogo from '/public2/icons/api.svg';
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -16,13 +9,13 @@ import { typography } from '@/lib/design-system';
 import { motion } from "framer-motion";
 
 const platforms = [
-  { name: "Shoptet", logo: ShoptetLogo },
-  { name: "PrestaShop", logo: PrestaShopLogo },
-  { name: "WooCommerce", logo: WooCommerceLogo },
-  { name: "Shopify", logo: ShopifyLogo },
-  { name: "Magento", logo: MagentoLogo },
-  { name: "OpenCart", logo: OpenCartLogo },
-  { name: "API", logo: APILogo },
+  { name: "Shoptet", logo: "/public2/icons/shoptet.svg" },
+  { name: "PrestaShop", logo: "/public2/icons/prestashop.svg" },
+  { name: "WooCommerce", logo: "/public2/icons/woocommerce.svg" },
+  { name: "Shopify", logo: "/public2/icons/shopify.svg" },
+  { name: "Magento", logo: "/public2/icons/magento.svg" },
+  { name: "OpenCart", logo: "/public2/icons/opencart.svg" },
+  { name: "API", logo: "/public2/icons/api.svg" },
 ];
 
 export function Platforms() {

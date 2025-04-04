@@ -85,7 +85,7 @@ export function Navbar() {
         )}>
           <Link href="/" className="flex-none">
             <Image
-              src="/public2/files/Logo_PassProve_bila.svg"
+              src="/files/Logo_PassProve_bila.svg"
               alt="PassProve Logo"
               width={140}
               height={40}

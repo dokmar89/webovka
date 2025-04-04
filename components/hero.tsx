@@ -44,7 +44,7 @@ export function Hero() {
             className="flex justify-center mb-6"
           >
             <Image
-              src="/public2/files/Logo_PassProve_bila.svg"
+              src="/files/Logo_PassProve_bila.svg"
               alt="PassProve Logo"
               width={200}
               height={80}
@@ -171,7 +171,7 @@ export function Hero() {
               >
                 <div className="absolute -inset-12 bg-gradient-to-r from-[#154350]/40 via-[#8FBEC3]/10 to-[#FAC833]/20 rounded-full blur-3xl animate-pulse opacity-60" />
                 <Image
-                  src="/public2/files/Logo_PassProve_bila.svg"
+                  src="/files/Logo_PassProve_bila.svg"
                   alt="PassProve Logo"
                   width={600}
                   height={300}

@@ -154,7 +154,7 @@ const PropojenisEshopemPage = () => {
                         <p className="text-white/60 text-sm">GDPR kompatibilní s certifikací ISO 27001</p>
                       </div>
                     </li>
-                  </ul>
+          </ul>
                 </div>
                 <div>
                   <div className="relative rounded-xl overflow-hidden border border-white/10 h-full">
@@ -202,7 +202,7 @@ const PropojenisEshopemPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+        </section>
       <Footer />
     </div>
   );

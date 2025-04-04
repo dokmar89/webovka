@@ -224,7 +224,7 @@ export default function HotoveReseniPage() {
             </Card>
           </motion.div>
         </div>
-      </section>
+        </section>
       <Footer />
     </div>
   );

@@ -234,7 +234,7 @@ export default function ApiEndpointsPage() {
             </Card>
           </motion.div>
         </div>
-      </section>
+        </section>
       <Footer />
     </div>
   );
