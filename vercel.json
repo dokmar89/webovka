@@ -10,7 +10,7 @@
   },
   "headers": [
     {
-      "source": "/public/(.*)",
+      "source": "/public2/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -21,10 +21,10 @@
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/public/icons/(.*)", "dest": "/icons/$1" },
-    { "src": "/public/files/(.*)", "dest": "/files/$1" },
-    { "src": "/public/images/(.*)", "dest": "/images/$1" },
-    { "src": "/public/fonts/(.*)", "dest": "/fonts/$1" },
+    { "src": "/public2/icons/(.*)", "dest": "/public2/icons/$1" },
+    { "src": "/public2/files/(.*)", "dest": "/public2/files/$1" },
+    { "src": "/public2/images/(.*)", "dest": "/public2/images/$1" },
+    { "src": "/public2/fonts/(.*)", "dest": "/public2/fonts/$1" },
     { "src": "/(.*)", "dest": "/" }
   ]
 } 

@@ -24,6 +24,9 @@ const nextConfig = {
     NEXT_PUBLIC_BASE_PATH: '',
   },
   trailingSlash: false,
+  publicRuntimeConfig: {
+    staticFolder: '/public2',
+  },
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,

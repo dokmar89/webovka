@@ -1,12 +1,12 @@
 'use client'
 
-import ShoptetLogo from '/public/icons/shoptet.svg';
-import PrestaShopLogo from '/public/icons/prestashop.svg';
-import WooCommerceLogo from '/public/icons/woocommerce.svg';
-import ShopifyLogo from '/public/icons/shopify.svg';
-import MagentoLogo from '/public/icons/magento.svg';
-import OpenCartLogo from '/public/icons/opencart.svg';
-import APILogo from '/public/icons/api.svg';
+import ShoptetLogo from '/public2/icons/shoptet.svg';
+import PrestaShopLogo from '/public2/icons/prestashop.svg';
+import WooCommerceLogo from '/public2/icons/woocommerce.svg';
+import ShopifyLogo from '/public2/icons/shopify.svg';
+import MagentoLogo from '/public2/icons/magento.svg';
+import OpenCartLogo from '/public2/icons/opencart.svg';
+import APILogo from '/public2/icons/api.svg';
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

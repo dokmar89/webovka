@@ -78,7 +78,7 @@ const OPassProvePage = () => {
               className="flex justify-center mb-4"
             >
               <Image
-                src="/files/Logo_PassProve_bila.svg"
+                src="/public2/files/Logo_PassProve_bila.svg"
                 alt="PassProve Logo"
                 width={250}
                 height={100}
@@ -343,7 +343,7 @@ const OPassProvePage = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-10">
               <div className="rounded-xl p-8 flex flex-col items-center justify-center bg-white shadow-lg">
                 <Image
-                  src="/files/Logo_PassProve_cerna.svg"
+                  src="/public2/files/Logo_PassProve_cerna.svg"
                   alt="PassProve Černé Logo"
                   width={200}
                   height={80}
@@ -357,7 +357,7 @@ const OPassProvePage = () => {
               
               <div className="rounded-xl p-8 flex flex-col items-center justify-center bg-[#154350] shadow-lg border border-white/10">
                 <Image
-                  src="/files/Logo_PassProve_bila.svg"
+                  src="/public2/files/Logo_PassProve_bila.svg"
                   alt="PassProve Bílé Logo"
                   width={200}
                   height={80}
@@ -371,7 +371,7 @@ const OPassProvePage = () => {
               
               <div className="rounded-xl p-8 flex flex-col items-center justify-center bg-gradient-to-br from-[#0D2B33] to-[#154350] shadow-lg border border-white/10">
                 <Image
-                  src="/files/Logo_PassProve_barvy.svg"
+                  src="/public2/files/Logo_PassProve_barvy.svg"
                   alt="PassProve Barevné Logo"
                   width={200}
                   height={80}
