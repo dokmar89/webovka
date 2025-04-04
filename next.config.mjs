@@ -17,7 +17,6 @@ const nextConfig = {
     unoptimized: true,
     domains: ['vercel.app', 'passprove.cz'],
   },
-  output: 'export',
   distDir: 'out',
   assetPrefix: '/',
   env: {
