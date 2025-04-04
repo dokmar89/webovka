@@ -3,8 +3,28 @@
   "buildCommand": "next build",
   "installCommand": "npm install",
   "outputDirectory": "out",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "github": {
+    "silent": true
+  },
+  "headers": [
+    {
+      "source": "/public/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/public/icons/(.*)", "dest": "/icons/$1" },
+    { "src": "/public/files/(.*)", "dest": "/files/$1" },
+    { "src": "/public/images/(.*)", "dest": "/images/$1" },
+    { "src": "/public/fonts/(.*)", "dest": "/fonts/$1" },
     { "src": "/(.*)", "dest": "/" }
   ]
 } 

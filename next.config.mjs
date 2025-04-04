@@ -15,13 +15,33 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    domains: ['vercel.app', 'passprove.cz'],
   },
   output: 'export',
-  trailingSlash: true,
+  distDir: 'out',
+  assetPrefix: '/',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '',
+  },
+  trailingSlash: false,
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(svg|png|jpg|jpeg|gif|webp)$/i,
+      use: {
+        loader: 'file-loader',
+        options: {
+          publicPath: '/_next/static/images/',
+          outputPath: 'static/images/',
+          name: '[name].[hash].[ext]',
+        },
+      },
+    });
+    return config;
   },
 }
 
