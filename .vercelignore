@@ -1,0 +1,20 @@
+# Dependencies
+node_modules
+
+# Build outputs
+.next
+out
+
+# Environment files
+.env*
+!.env.example
+
+# Git files
+.git
+.github
+
+# Misc
+.DS_Store
+*.log
+README.md
+LICENSE 
