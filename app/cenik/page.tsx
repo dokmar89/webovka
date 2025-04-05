@@ -77,38 +77,50 @@ const CeníkPage = () => {
   
   return (
     <>
-      <div className="min-h-screen bg-[#164550]">
+      <div className="min-h-screen bg-gradient-to-br from-[#daebed] to-[#c5e2e6] dark:from-[#164550] dark:to-[#0d2b33]">
         <Navbar />
-        <section className="relative min-h-screen w-full">
-          {/* Background elements */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 opacity-[0.02]"
+        
+        {/* Hero Section */}
+        <section className="relative min-h-screen w-full overflow-hidden">
+          {/* Pozadí s vzory */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.02]"
               style={{
-                backgroundImage: `linear-gradient(#8FBEC3 1px, transparent 1px),
-                                linear-gradient(90deg, #8FBEC3 1px, transparent 1px)`,
-                backgroundSize: '50px 50px'
+                backgroundImage: `radial-gradient(#064052 1px, transparent 1px)`,
+                backgroundSize: '30px 30px'
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-[#154350]/5 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#b1d5d9]/20 via-transparent to-transparent dark:from-[#154350]/5 dark:via-transparent dark:to-transparent" />
+          </div>
+          
+          {/* Dekorativní prvky */}
+          <div className="absolute top-32 right-[5%] w-72 h-72 md:w-96 md:h-96 rounded-full bg-[#8FBEC3]/10 dark:bg-[#8FBEC3]/5 blur-3xl z-0 animate-pulse"></div>
+          <div className="absolute top-1/2 left-[10%] w-64 h-64 md:w-80 md:h-80 rounded-full bg-[#FAC833]/10 dark:bg-[#FAC833]/5 blur-3xl z-0 animate-pulse" style={{animationDelay: "1.5s"}}></div>
+          
+          {/* Diagonální prvek v horní části */}
+          <div className="absolute top-0 left-0 right-0 h-[30vh] overflow-hidden z-0">
+            <div className="absolute top-0 left-0 right-0 h-full bg-[#b1d5d9]/30 dark:bg-[#154350]/30 transform -skew-y-6 origin-top-left"></div>
           </div>
 
           <div className="container px-8 md:px-12 py-32 mx-auto relative z-10 max-w-[1440px]">
-            {/* Hero Section */}
+            {/* Hero obsah */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-center space-y-8 max-w-4xl mx-auto mb-24"
+              className="text-center space-y-8 max-w-4xl mx-auto mb-32"
             >
-              <div className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-[#8FBEC3] mx-auto">
+              <div className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-white/20 dark:bg-white/5 backdrop-blur-sm border border-white/20 text-sm text-[#064052] dark:text-[#8FBEC3] mx-auto">
                 <Shield className="w-4 h-4 mr-2" />
                 <span>Transparentní ceník</span>
               </div>
-              <h1 className={typography.heading.h1}>
+              
+              <h1 className="text-5xl md:text-6xl font-bold text-[#064052] dark:text-white leading-tight">
                 Vyberte si plán
-                <span className="block mt-6 text-[#FAC833]">který nejlépe odpovídá vašim potřebám</span>
+                <span className="block mt-4 text-[#FAC833]">který nejlépe odpovídá vašim potřebám</span>
               </h1>
-              <p className={`${typography.body.large} text-white/60 max-w-3xl mx-auto`}>
+              
+              <p className="text-[#064052]/80 dark:text-white/60 text-lg md:text-xl max-w-3xl mx-auto">
                 Nabízíme dva základní cenové plány, které se liší délkou závazku a úrovní poskytovaných služeb. Vyberte si ten, který vám bude nejlépe vyhovovat.
               </p>
             </motion.div>

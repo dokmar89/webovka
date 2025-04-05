@@ -27,8 +27,8 @@ export function ServiceDescription() {
     <section className="relative py-32">
       {/* Floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#8FBEC3] opacity-[0.02] rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#154350] opacity-[0.02] rounded-full blur-3xl animate-float" style={{ animationDelay: '-2s' }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#8FBEC3] opacity-[0.05] dark:opacity-[0.02] rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#154350] opacity-[0.05] dark:opacity-[0.02] rounded-full blur-3xl animate-float" style={{ animationDelay: '-2s' }} />
       </div>
 
       <div className="container px-12 mx-auto max-w-7xl space-y-32 relative"> 
@@ -45,12 +45,12 @@ export function ServiceDescription() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-white/5 backdrop-blur-sm rounded-2xl p-14 shadow-xl border border-white/10 relative z-10"> 
-          <h2 className={`${typography.heading.h2} text-white mb-12 text-center`}> 
+          className="bg-white/80 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-14 shadow-xl border border-white/50 dark:border-white/10 relative z-10"> 
+          <h2 className={`${typography.heading.h2} text-[#064052] dark:text-white mb-12 text-center`}> 
             Dodržujte zákon 65/2017 Sb. o ochraně zdraví před škodlivými účinky návykových látek 
           </h2> 
           <div className="space-y-12 mt-6"> 
-            <h3 className={`${typography.heading.h3} text-white mb-8 text-center`}> 
+            <h3 className={`${typography.heading.h3} text-[#064052] dark:text-white mb-8 text-center`}> 
               Přínosy našeho řešení 
             </h3> 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10"> 
@@ -74,21 +74,21 @@ export function ServiceDescription() {
           className="py-16"> 
           <div className="max-w-4xl mx-auto space-y-12"> 
             <div className="space-y-6 text-center"> 
-              <h3 className={`${typography.heading.h3} text-white`}> 
+              <h3 className={`${typography.heading.h3} text-[#064052] dark:text-white`}> 
                 Prodáváte tabákové výrobky, erotické pomůcky, alkohol nebo jiné výrobky určené pro osoby nad 18 let? 
               </h3> 
-              <p className={`${typography.body.large} text-white/60 max-w-3xl mx-auto`}> 
+              <p className={`${typography.body.large} text-[#064052]/80 dark:text-white/60 max-w-3xl mx-auto`}> 
                 S námi budete zodpovědný prodejce, který dodržuje své zákonné povinnosti a má kvalitní zákaznický servis. 
               </p> 
             </div> 
             <div className="flex justify-center"> 
               <Button 
                 asChild 
-                className="rounded-full h-16 px-12 text-lg bg-[#FAC833] text-[#231F20] hover:opacity-90 transition-all duration-300" 
+                className="rounded-full h-16 px-12 text-lg bg-gradient-to-r from-[#FAC833] to-[#FAD862] hover:from-[#FAD862] hover:to-[#FAE891] text-[#064052] transition-all duration-300 hover:shadow-md hover:scale-[1.02] group" 
               > 
                 <Link href="/funkce/jak-to-funguje" className="flex items-center gap-3"> 
                   Jak to funguje 
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> 
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> 
                 </Link> 
               </Button> 
             </div> 
@@ -124,22 +124,22 @@ export function ServiceDescription() {
               animate="visible"
               variants={fadeIn}
               className="group"> 
-              <Card className="p-10 space-y-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl shadow-xl transition-all duration-300 hover:bg-white/10 relative h-full"> 
+              <Card className="p-10 space-y-8 bg-white/80 backdrop-blur-sm border border-white/50 dark:bg-white/5 dark:border-white/10 rounded-2xl shadow-xl transition-all duration-300 hover:bg-white/90 dark:hover:bg-white/10 relative h-full"> 
                 <div className="absolute inset-0 flex items-center justify-center opacity-10"> 
                   {React.cloneElement(card.icon, { className: "w-60 h-60 text-[#FAC833] transform rotate-[-15deg] blur-lg" })} 
                 </div> 
                 <div className="flex items-center justify-center w-20 h-20 rounded-full bg-[#FAC833]/10 mb-6"> 
                   {card.icon} 
                 </div>
-                <h3 className={`${typography.heading.h4} text-white/90 text-center`}>{card.title}</h3>
+                <h3 className={`${typography.heading.h4} text-[#064052] dark:text-white/90 text-center`}>{card.title}</h3>
                 <Button 
                   asChild 
                   variant="outline" 
-                  className="w-full text-[#8FBEC3] border-[#8FBEC3]/20 hover:bg-[#8FBEC3]/5 rounded-full h-14 transition-all duration-300 mt-auto" 
+                  className="w-full text-[#064052] dark:text-[#8FBEC3] border-[#064052]/20 dark:border-[#8FBEC3]/20 hover:bg-gradient-to-r hover:from-white/30 hover:to-transparent dark:hover:bg-gradient-to-r dark:hover:from-[#8FBEC3]/10 dark:hover:to-transparent rounded-full h-14 transition-all duration-300 group hover:border-[#064052]/40 dark:hover:border-[#8FBEC3]/40" 
                 > 
                   <Link href={card.link} className="flex items-center justify-center gap-2"> 
                     {card.linkText} 
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> 
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> 
                   </Link> 
                 </Button> 
               </Card> 
@@ -153,11 +153,11 @@ export function ServiceDescription() {
 
 function BenefitItem({ description, icon }: { description: string, icon: React.ReactNode }) {
   return (
-    <div className="flex items-start space-x-6 bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/10 hover:bg-white/15 transition-all duration-300 h-full"> 
+    <div className="flex items-start space-x-6 bg-white/70 dark:bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/50 dark:border-white/10 hover:bg-white/80 dark:hover:bg-white/15 transition-all duration-300 h-full hover:shadow-xl hover:scale-[1.01] hover:border-[#FAC833]/20"> 
       <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center bg-[#FAC833]/10 rounded-xl border border-[#FAC833]/20"> 
         {icon} 
       </div>
-      <p className={`${typography.body.large} text-white/70 pt-2`}>{description}</p>
+      <p className={`${typography.body.large} text-[#064052]/90 dark:text-white/70 pt-2`}>{description}</p>
     </div>
   );
 }

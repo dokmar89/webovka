@@ -4,23 +4,43 @@
 
 @layer base {
   :root {
-    --background: 220 14% 13%;
-    --foreground: 0 0% 100%;
-    --card: 220 14% 13%;
-    --card-foreground: 0 0% 100%;
-    --popover: 220 14% 13%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 192 58% 20%;
+    --background: 0 0% 100%;
+    --foreground: 204 22% 13%;
+    --card: 180 20% 97%;
+    --card-foreground: 204 22% 13%;
+    --popover: 180 20% 97%;
+    --popover-foreground: 204 22% 13%;
+    --primary: 198 78% 21%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 187 31% 66%;
-    --secondary-foreground: 0 0% 100%;
-    --accent: 43 95% 59%;
-    --accent-foreground: 220 14% 13%;
-    --muted: 60 24% 47%;
-    --muted-foreground: 0 0% 100%;
-    --border: 187 31% 66%;
-    --input: 187 31% 66%;
-    --ring: 43 95% 59%;
+    --secondary: 186 46% 65%;
+    --secondary-foreground: 204 22% 13%;
+    --accent: 46 93% 59%;
+    --accent-foreground: 204 22% 13%;
+    --muted: 180 20% 94%;
+    --muted-foreground: 204 22% 30%;
+    --border: 180 30% 92%;
+    --input: 180 30% 92%;
+    --ring: 46 93% 59%;
+  }
+  
+  .dark {
+    --background: 199 68% 10%;
+    --foreground: 180 5% 93%;
+    --card: 198 69% 14%;
+    --card-foreground: 180 5% 93%;
+    --popover: 198 69% 14%; 
+    --popover-foreground: 180 5% 93%;
+    --primary: 186 46% 65%;
+    --primary-foreground: 199 68% 8%;
+    --secondary: 198 78% 21%;
+    --secondary-foreground: 180 5% 93%;
+    --accent: 46 93% 59%;
+    --accent-foreground: 199 68% 8%;
+    --muted: 198 69% 16%;
+    --muted-foreground: 180 5% 80%;
+    --border: 198 55% 18%;
+    --input: 198 55% 18%;
+    --ring: 46 93% 59%;
   }
 }
 
@@ -29,8 +49,30 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#164550] text-foreground min-h-screen;
+    @apply text-foreground min-h-screen transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  body {
+    @apply bg-[#daebed] dark:bg-[#064052];
+  }
+
+  .background-animation::before,
+  .background-animation::after {
+    @apply dark:opacity-100 opacity-60;
+  }
+
+  .light-background {
+    @apply fixed inset-0 -z-10 overflow-hidden bg-[#daebed] dark:hidden;
+  }
+  
+  .light-background::before {
+    content: '';
+    @apply absolute inset-0;
+    background-image: radial-gradient(#064052/5 1px, transparent 1px), radial-gradient(#064052/5 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    opacity: 0.4;
   }
 }
 
@@ -144,7 +186,7 @@ html {
 
 /* Better focus styles */
 :focus-visible {
-  @apply outline-none ring-2 ring-[#FAC833] ring-offset-2 ring-offset-[#231F20];
+  @apply outline-none ring-2 ring-[#FAC833] ring-offset-2 ring-offset-white dark:ring-offset-[#164550];
 }
 
 /* Custom scrollbar */
@@ -153,9 +195,9 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-[#231F20];
+  @apply bg-white dark:bg-[#064052];
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-[#8FBEC3]/10 rounded-full hover:bg-[#8FBEC3]/20 transition-colors;
+  @apply bg-[#b1d5d9]/60 hover:bg-[#b1d5d9]/80 dark:bg-[#97AAAF]/30 dark:hover:bg-[#97AAAF]/40 rounded-full transition-colors;
 }

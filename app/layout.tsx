@@ -1,5 +1,6 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
   title: "PassProve - Ověření věku pro e-shopy",
@@ -20,8 +21,16 @@ export default function RootLayout({
   return (
     <html lang="cs" suppressHydrationWarning className={inter.variable}>
       <body>
-        <div className="background-animation" />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="background-animation" />
+          <div className="light-background" />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

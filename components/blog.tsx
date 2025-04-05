@@ -58,10 +58,10 @@ export function Blog() {
         transition={{ duration: 0.5 }}
         className="text-center space-y-8 max-w-4xl mx-auto mb-16"
       >
-        <h2 className={`${typography.heading.h2} text-white mb-6`}>
+        <h2 className={`${typography.heading.h2} text-[#064052] dark:text-white mb-6`}>
           Aktuality
         </h2>
-        <p className={`${typography.body.large} text-white/60 max-w-3xl mx-auto`}>
+        <p className={`${typography.body.large} text-[#064052]/80 dark:text-white/60 max-w-3xl mx-auto`}>
           Nejnovější informace ze světa PassProve
         </p>
       </motion.div>
@@ -75,7 +75,7 @@ export function Blog() {
             variants={fadeIn}
             key={index}
           >
-            <Card className="group border border-white/10 bg-white/5 backdrop-blur-sm shadow-lg overflow-hidden h-full hover:bg-white/10 transition-all duration-300">
+            <Card className="group border border-white/50 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-sm shadow-lg overflow-hidden h-full hover:bg-white/90 dark:hover:bg-white/10 transition-all duration-300">
               <CardHeader className="p-0">
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
@@ -88,14 +88,14 @@ export function Blog() {
                 </div>
               </CardHeader>
               <CardContent className="p-10 space-y-4 relative">
-                <Badge className="bg-[#FAC833]/20 hover:bg-[#FAC833]/30 text-[#FAC833] font-medium py-1.5 px-3">
+                <Badge className="bg-[#FAC833]/20 hover:bg-[#FAC833]/30 text-[#064052] dark:text-[#FAC833] font-medium py-1.5 px-3">
                   {article.category}
                 </Badge>
-                <CardTitle className="text-2xl">{article.title}</CardTitle>
-                <div className="text-[#8FBEC3] text-sm font-medium mt-2 mb-4">
+                <CardTitle className="text-2xl text-[#064052] dark:text-white">{article.title}</CardTitle>
+                <div className="text-[#064052]/70 dark:text-[#8FBEC3] text-sm font-medium mt-2 mb-4">
                   {article.date}
                 </div>
-                <CardDescription className="text-white/70 text-lg">
+                <CardDescription className="text-[#064052]/80 dark:text-white/70 text-lg">
                   {article.excerpt}
                 </CardDescription>
               </CardContent>
@@ -103,11 +103,11 @@ export function Blog() {
                 <Button 
                   asChild 
                   variant="outline" 
-                  className="w-full border-white/10 text-white hover:bg-white/5 rounded-full h-14"
+                  className="w-full border-[#064052]/20 dark:border-white/10 text-[#064052] dark:text-white hover:bg-gradient-to-r hover:from-white/30 hover:to-transparent dark:hover:bg-gradient-to-r dark:hover:from-[#97AAAF]/10 dark:hover:to-transparent rounded-full h-14 transition-all duration-300 group hover:border-[#064052]/40 dark:hover:border-white/20"
                 >
                   <Link href={article.link} className="flex items-center justify-center">
                     Přečíst celý článek
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </Button>
               </CardFooter>
@@ -125,11 +125,11 @@ export function Blog() {
         <Button 
           asChild 
           size="lg"
-          className="bg-[#FAC833] hover:bg-[#FAC833]/90 text-[#231F20] border-0 rounded-full h-16 px-12 text-lg"
+          className="bg-gradient-to-r from-[#FAC833] to-[#FAD862] hover:from-[#FAD862] hover:to-[#FAE891] text-[#064052] border-0 rounded-full h-16 px-12 text-lg transition-all duration-300 hover:shadow-md hover:scale-[1.02] group"
         >
           <Link href="/blog" className="flex items-center">
             Zobrazit vše
-            <ArrowRight className="ml-3 h-5 w-5" />
+            <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </Button>
       </motion.div>
