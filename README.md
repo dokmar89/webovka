@@ -1,42 +1,42 @@
-# PassProve — product website
+# PassProve — produktový web
 
-A marketing and documentation website presenting the PassProve verification concept and e-commerce integration options.
+Prezentační a dokumentační web představující koncept PassProve a možnosti integrace do e-shopů.
 
-**Status:** Supporting website / legacy presentation layer; claims on existing pages require separate verification.
+**Stav:** Doprovodný web / starší prezentační vrstva; tvrzení na existujících stránkách vyžadují samostatné ověření.
 
-## Scope
+## Co projekt obsahuje
 
-- Product, pricing and company pages.
-- Integration and API-documentation pages.
-- Blog and reusable presentation sections.
+- Stránky produktu, ceníku a informací o projektu.
+- Popis integrací a API.
+- Blog a sdílené prezentační sekce.
 
-## Technology
+## Technologie
 
 Next.js, React, TypeScript, Tailwind CSS.
 
-## Architecture and source map
+## Architektura a struktura
 
-- `app/` — content routes
-- `components/` — landing-page and shared UI
-- `lib/` — design/theme helpers
+- `app/` — obsahové stránky
+- `components/` — sekce webu a sdílené rozhraní
+- `lib/` — pomocné funkce vzhledu a motivů
 
-## Local development
+## Lokální vývoj
 
-Requires Node.js and npm. From the repository root:
+Potřebujete Node.js a npm. V kořenové složce repozitáře spusťte:
 
 ```sh
 npm install
 npm run dev
 ```
 
-Build command declared by this checkout: `npm run build`.
+Příkaz pro sestavení uvedený v projektu: `npm run build`.
 
-These are the repository scripts, not a claim of a passing build. Dependency installation, build and live integrations were not executed during the documentation review.
+Jde o příkazy deklarované v repozitáři, nikoli o potvrzení úspěšného sestavení. Instalace závislostí, sestavení ani napojení na živé služby nebyly při úpravě dokumentace spuštěny.
 
-## Configuration and limitations
+## Konfigurace a omezení
 
-This repository is a presentation website; descriptions of providers, certifications or integrations on its pages do not prove operational backend support. `npm run build` invokes `npm install` before the Next.js build. Review duplicated assets and configuration during future maintenance.
+Jde o prezentační web. Popisy poskytovatelů, certifikací nebo integrací nedokládají funkčnost příslušných serverových služeb. `npm run build` před sestavením Next.js spouští `npm install`. Při další údržbě zkontrolujte duplicitní soubory a konfiguraci.
 
-## Documentation next steps
+## Co doplnit do dokumentace
 
-Capture screenshots using synthetic data, document a reproducible test run, and record which integrations have been verified. Keep credentials and deployment-specific configuration outside version control.
+Snímky obrazovky s fiktivními daty, opakovatelný postup ověření a přehled skutečně otestovaných integrací. Přihlašovací údaje a konfigurace konkrétního nasazení patří mimo Git.
